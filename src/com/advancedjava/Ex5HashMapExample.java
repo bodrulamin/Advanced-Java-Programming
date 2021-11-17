@@ -4,7 +4,7 @@ import com.advancedjava.*;
 import java.util.HashMap;
 
 
-public class HashMapExample {
+public class Ex5HashMapExample {
 
 	public static void main(String[] args) {
 		HashMap<String, Integer> phoneBook = new HashMap<>();

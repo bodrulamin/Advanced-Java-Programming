@@ -14,7 +14,7 @@ class Office extends Building {
 
 }
 
-public class SubstitutionPrinciple {
+public class Ex2SubstitutionPrinciple {
 
 	public static void main(String[] args) {
 

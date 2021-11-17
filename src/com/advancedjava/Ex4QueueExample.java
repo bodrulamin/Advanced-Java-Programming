@@ -5,7 +5,7 @@ import com.advancedjava.*;
 import java.util.LinkedList;
 
 
-public class QueueExample {
+public class Ex4QueueExample {
 
 	public static void main(String[] args) {
 		LinkedList<String> customerList = new LinkedList<>();

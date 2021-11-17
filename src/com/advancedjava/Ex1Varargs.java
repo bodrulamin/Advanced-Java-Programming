@@ -8,7 +8,7 @@ package com.advancedjava;
  *
  * @author b
  */
-public class Varargs {
+public class Ex1Varargs {
 
 	/**
 	 * @param args the command line arguments
