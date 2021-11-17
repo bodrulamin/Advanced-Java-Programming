@@ -1,41 +1,66 @@
 package com.advancedjava;
 
 import com.advancedjava.*;
+import java.util.ArrayList;
 import java.util.HashMap;
-
-class Square {
-
-	int sideLength;
-
-	public Square(int sideLength) {
-		this.sideLength = sideLength;
-	}
-
-	public int calculateArea() {
-		return sideLength * sideLength;
-	}
-}
-
-@FunctionalInterface
-interface Shapes{
-	public abstract  int getArea(Square person);
-}
-
 
 public class Exx10Streams {
 
 	public static void main(String[] args) {
-		Square s = new Square(4);
-		Shapes shapes = ((square) -> {
-			return square.calculateArea(); //To change body of generated lambdas, choose Tools | Templates.
-		});
+		ArrayList<Book> books = populateLibrary();
 
-		Shapes altShapes = Square::calculateArea;
+		books.stream()
+			.filter(book-> book.getAuthor().startsWith("B"))
+			.forEach(System.out::println);
 
-		System.out.println(shapes.getArea(s));
-		System.out.println(altShapes.getArea(s));
 
-		
 	}
+
+	private static ArrayList<Book> populateLibrary() {
+		ArrayList<Book> list = new ArrayList();
+		list.add(new Book("Bodrul", "Funcitonal programming"));
+		list.add(new Book("Bodrul", "Funcitonal programming"));
+		list.add(new Book("Khalil", "Hello programming"));
+		list.add(new Book("Rakib", "Funcitonal programming"));
+		list.add(new Book("Bodrul", "Funcitonal programming"));
+		list.add(new Book("Bodrul", "Funcitonal programming"));
+
+
+		return list;
+	}
+
+}
+
+class Book {
+
+	private String author;
+	private String title;
+
+	public Book(String author, String title) {
+		this.author = author;
+		this.title = title;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getAuthor() {
+		return author;
+	}
+
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+
+	@Override
+	public String toString() {
+		return "Book{" + "author=" + author + ", title=" + title + '}';
+	}
+	
 
 }
