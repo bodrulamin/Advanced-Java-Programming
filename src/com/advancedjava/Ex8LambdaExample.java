@@ -3,13 +3,9 @@ package com.advancedjava;
 import com.advancedjava.*;
 import java.util.HashMap;
 
-@FunctionalInterface
-interface GreetingMessage {
 
-	abstract void greet(String name);
-}
 
-public class FunctionalInterfaceExample {
+public class Ex8LambdaExample {
 
 	public static void main(String[] args) {
 

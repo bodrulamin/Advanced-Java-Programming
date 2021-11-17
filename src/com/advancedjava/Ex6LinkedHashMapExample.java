@@ -6,7 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 
-public class LinkedHashMapExample {
+public class Ex6LinkedHashMapExample {
 
 	public static void main(String[] args) {
 		LinkedHashMap<String, Integer> phoneBook = new LinkedHashMap<>(2, 0.75f, false);
